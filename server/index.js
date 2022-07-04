@@ -24,4 +24,4 @@ app.get('/',(req,res)=>{
 
 app.use('/graphql', graphqlHTTP({ schema, graphiql: process.env.NODE_ENV }))
 
-app.listen(PORT, console.log(`Server running at port ${PORT} `app.address())
+app.listen(PORT, console.log(`Server running at port ${PORT} `)

@@ -18,6 +18,10 @@ app.use(cors())
 //MongoDB Connection
 connectDB()
 
+app.get('/',(req,res)=>{
+  res.send('Api is running')
+})
+
 app.use('/graphql', graphqlHTTP({ schema, graphiql: process.env.NODE_ENV }))
 
 app.listen(PORT, console.log(`Server running at port ${PORT} `.bgYellow.green))
